@@ -10,6 +10,8 @@ export async function initStorage(): Promise<void> {
         await storage.create();
     }
 }
+// add dummy data
+// We need a test user and linked progress object
 
 export function getStorage(): Storage {
     if (!storage) {

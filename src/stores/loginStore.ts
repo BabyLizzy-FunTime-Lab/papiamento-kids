@@ -7,7 +7,7 @@ interface Profile {
     id: string
     name: string
     avatar: string
-    createdAt: Date
+    createdAt: number
 }
 
 interface LoginState {
@@ -32,8 +32,29 @@ export const useLoginStore = defineStore('login', {
     },
     actions: {
         async load() {
+            // This should get the dummy data.
             this.profiles = (await storage.get('profiles') || [])
             this.activeProfileId = (await storage.get('activeProfileId') || null)
+        },
+
+        async createProfile(name: string, avatar: string) {
+            const profile: Profile = {
+                id: crypto.randomUUID(),
+                name,
+                avatar,
+                createdAt: Date.now(),
+            }
+
+            this.profiles.push(profile)
+            await storage.set('profiles', this.profiles)
+
+            this.activeProfileId = profile.id
+            await storage.set('activeProfileId', profile.id)
+        },
+
+        async selectProfile(id: string) {
+            this.activeProfileId = id
+            await storage.set('activeProfileId', id)
         }
     }
 })
