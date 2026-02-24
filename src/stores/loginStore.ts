@@ -1,14 +1,8 @@
 import { defineStore } from "pinia";
 import { getStorage } from "@/services/storage";
+import type {Profile} from "@/types/profile";
 
 const storage = getStorage();
-
-interface Profile {
-    id: string
-    name: string
-    avatar: string
-    createdAt: number
-}
 
 interface LoginState {
     profiles: Profile[]
@@ -37,12 +31,13 @@ export const useLoginStore = defineStore('login', {
             this.activeProfileId = (await storage.get('activeProfileId') || null)
         },
 
-        async createProfile(name: string, avatar: string) {
+        async createProfile(name: string, avatar_url: string) {
             const profile: Profile = {
                 id: crypto.randomUUID(),
                 name,
-                avatar,
+                avatar_url,
                 createdAt: Date.now(),
+                lessonProgress: []
             }
 
             this.profiles.push(profile)
