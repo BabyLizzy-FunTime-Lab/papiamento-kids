@@ -10,6 +10,9 @@ import { initStorage} from "@/services/storage";
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
 
+/* Basic layout for the entire app */
+import BaseLayout from "@/components/base/BaseLayout.vue";
+
 /* Basic CSS for apps built with Ionic */
 import '@ionic/vue/css/normalize.css';
 import '@ionic/vue/css/structure.css';
@@ -42,6 +45,8 @@ async function bootstrap(){
         .use(IonicVue)
         .use(createPinia())
         .use(router);
+
+    app.component('BaseLayout', BaseLayout)
 
     await initStorage();
     await router.isReady();
