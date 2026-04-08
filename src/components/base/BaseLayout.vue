@@ -13,6 +13,7 @@ import {
     IonFooter,
     IonIcon
 } from "@ionic/vue";
+import BaseButton from "@/components/base/BaseButton.vue";
 import { ellipsisHorizontal, ellipsisVertical, } from 'ionicons/icons';
 
 </script>

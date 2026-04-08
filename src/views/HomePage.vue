@@ -1,13 +1,17 @@
 <template>
   <base-layout>
     <div class="center-container">
-      <ion-button size="large">Start</ion-button>
+      <base-button
+          label="Start"
+          size="large"
+      />
     </div>
   </base-layout>
 </template>
 
 <script setup lang="ts">
 
+import BaseButton from "@/components/base/BaseButton.vue";
 </script>
 
 <style scoped>
