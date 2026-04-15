@@ -3,15 +3,20 @@ import { RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: HomePage
-  }
+    {
+        path: '/',
+        redirect: '/home'
+    },
+    {
+        path: '/home',
+        name: 'Home',
+        component: HomePage
+    },
+    {
+        path: '/user-home',
+        name: 'UserHomePage',
+        component: () => import('../views/UserHomePage.vue'),
+    }
 ]
 
 const router = createRouter({

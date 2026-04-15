@@ -15,3 +15,4 @@ export interface Profile {
     createdAt: number
     lessonProgress: LessonProgress[]
 }
+

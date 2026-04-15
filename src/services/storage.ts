@@ -18,8 +18,8 @@ export async function initStorage(): Promise<void> {
     }
 
     // test profiles content
-    // const testProfiles = await storage.get("profiles");
-    // console.table(testProfiles);
+    const testProfiles = await storage.get("profiles");
+    console.table(testProfiles);
 }
 
 export function getStorage(): Storage {

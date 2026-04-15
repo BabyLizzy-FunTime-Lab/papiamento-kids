@@ -12,6 +12,7 @@ import '@ionic/vue/css/core.css';
 
 /* Basic layout for the entire app */
 import BaseLayout from "@/components/base/BaseLayout.vue";
+import BaseButton from "@/components/base/BaseButton.vue";
 
 /* Basic CSS for apps built with Ionic */
 import '@ionic/vue/css/normalize.css';
@@ -47,6 +48,8 @@ async function bootstrap(){
         .use(router);
 
     app.component('BaseLayout', BaseLayout)
+    app.component('BaseButton', BaseButton)
+
 
     await initStorage();
     await router.isReady();

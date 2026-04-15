@@ -10,8 +10,14 @@
 </template>
 
 <script setup lang="ts">
-
-import BaseButton from "@/components/base/BaseButton.vue";
+// Get all the users so they can be rendered.
+import {useLoginStore} from "@/stores/loginStore";
+import {onMounted} from "vue";
+const loginStore = useLoginStore();
+onMounted(async() => {
+  await loginStore.load();
+  console.log(loginStore.profiles);
+})
 </script>
 
 <style scoped>
