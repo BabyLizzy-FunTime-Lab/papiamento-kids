@@ -15,6 +15,36 @@ const dummyProfiles: Profile[] = [
                 ]
             }
         ]
+    },
+    {
+        id: "u2",
+        name: "Luis",
+        avatar_url: "uglyMugshot.jpg",
+        createdAt: Date.now(),
+        lessonProgress: [
+            {
+                lessonId: "l2",
+                attempts: [
+                    {score: 7, date: "2026-01-02"},
+                    {score: 9, date: "2026-01-03"},
+                ]
+            }
+        ]
+    },
+    {
+        id: "u3",
+        name: "Rasmussen",
+        avatar_url: "bigMugshot.jpg",
+        createdAt: Date.now(),
+        lessonProgress: [
+            {
+                lessonId: "l3",
+                attempts: [
+                    {score: 8, date: "2026-01-05"},
+                    {score: 10, date: "2026-01-07"},
+                ]
+            }
+        ]
     }
 ]
 
