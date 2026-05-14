@@ -2,9 +2,9 @@ import type {Profile} from "@/types/profile";
 
 const dummyProfiles: Profile[] = [
     {
-        id: "u1",
+        id: "u12",
         name: "Jose",
-        avatar_url: "mugshot.jpg",
+        avatar: "tree-avatar.jpg",
         createdAt: Date.now(),
         lessonProgress: [
             {
@@ -17,9 +17,9 @@ const dummyProfiles: Profile[] = [
         ]
     },
     {
-        id: "u2",
+        id: "u13",
         name: "Luis",
-        avatar_url: "uglyMugshot.jpg",
+        avatar: "shoco-avatar.png",
         createdAt: Date.now(),
         lessonProgress: [
             {
@@ -32,9 +32,9 @@ const dummyProfiles: Profile[] = [
         ]
     },
     {
-        id: "u3",
+        id: "u14",
         name: "Rasmussen",
-        avatar_url: "bigMugshot.jpg",
+        avatar: "tree-avatar.jpg",
         createdAt: Date.now(),
         lessonProgress: [
             {
@@ -45,7 +45,52 @@ const dummyProfiles: Profile[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        id: "u9",
+        name: "Esther",
+        avatar: "tree-avatar.jpg",
+        createdAt: Date.now(),
+        lessonProgress: [
+            {
+                lessonId: "l2",
+                attempts: [
+                    {score: 7, date: "2026-01-02"},
+                    {score: 9, date: "2026-01-03"},
+                ]
+            }
+        ]
+    },
+    {
+        id: "u15",
+        name: "Lizzy",
+        avatar: "shoco-avatar.png",
+        createdAt: Date.now(),
+        lessonProgress: [
+            {
+                lessonId: "l3",
+                attempts: [
+                    {score: 8, date: "2026-01-05"},
+                    {score: 10, date: "2026-01-07"},
+                ]
+            }
+        ]
+    },
+    {
+        id: "u11",
+        name: "Evee",
+        avatar: "tree-avatar.jpg",
+        createdAt: Date.now(),
+        lessonProgress: [
+            {
+                lessonId: "l2",
+                attempts: [
+                    {score: 7, date: "2026-01-02"},
+                    {score: 9, date: "2026-01-03"},
+                ]
+            }
+        ]
+    },
 ]
 
 export class DummyDataFactory {

@@ -11,7 +11,7 @@ interface LessonProgress {
 export interface Profile {
     id: string
     name: string
-    avatar_url: string
+    avatar: string
     createdAt: number
     lessonProgress: LessonProgress[]
 }

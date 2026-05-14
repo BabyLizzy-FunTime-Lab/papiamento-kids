@@ -19,12 +19,23 @@ export async function initStorage(): Promise<void> {
         await storage.set('profiles', dummyProfiles);
     }
 
-    // This will add new dummy profiles without rewriting all data in storage.
     const existingProfiles = new Set( profiles.map(p => p.id));
     const newProfiles: Profile[] = dummyProfiles.filter(p => !existingProfiles.has(p.id) );
+
+    // This will add new dummy profiles without rewriting all data in storage.
     if (newProfiles.length > 0) {
         profiles = [...profiles, ...newProfiles];
         await storage.set('profiles', profiles);
+    }
+
+    // This will delete all profiles that no longer exist in the dummy data.
+    profiles = await storage.get("profiles");
+
+    const existingDummyProfiles = new Set( dummyProfiles.map(p => p.id));
+    const deletedProfiles: Profile[] = profiles.filter(p => !existingDummyProfiles.has(p.id));
+    if (deletedProfiles.length > 0) {
+        const correctedProfileList: Profile[] = profiles.filter(p => existingDummyProfiles.has(p.id));
+        await storage.set('profiles', correctedProfileList);
     }
 
     // test profiles content
