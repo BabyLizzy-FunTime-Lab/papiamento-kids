@@ -15,6 +15,7 @@ onMounted(async() => {
     <div class="center-container">
       <avatar-card
           v-for="profile of loginStore.profiles"
+          :key="profile.id"
           :name="profile.name"
           :avatar="profile.avatar"
       />
