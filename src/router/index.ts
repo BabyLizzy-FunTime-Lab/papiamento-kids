@@ -16,7 +16,12 @@ const routes: Array<RouteRecordRaw> = [
         path: '/user-home',
         name: 'UserHomePage',
         component: () => import('../views/UserHomePage.vue'),
-    }
+    },
+    // {
+    //     path: '/user-creator',
+    //     name: 'UserCreator',
+    //     component: () => import(),
+    // }
 ]
 
 const router = createRouter({

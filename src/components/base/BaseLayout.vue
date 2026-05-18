@@ -2,39 +2,38 @@
 import { ref } from 'vue';
 const title = ref<string>('BaseLayout');
 import {
-    IonPage,
-    IonToolbar,
-    IonHeader,
-    IonTitle,
-    IonContent,
-    IonButton,
-    IonButtons,
-    IonImg,
-    IonFooter,
-    IonIcon
+  IonPage,
+  IonContent,
+  IonFooter, IonTitle, IonToolbar, IonHeader, IonMenu, menuController,
 } from "@ionic/vue";
-import { ellipsisHorizontal, ellipsisVertical, } from 'ionicons/icons';
+import BaseToolbar from "@/components/base/BaseToolbar.vue";
 
+const closeMenu = async () => {
+  await menuController.close('toolbar-menu');
+}
 </script>
 
 <template>
-<ion-page>
-  <ion-header>
-    <ion-toolbar class="toolbar">
-      <ion-img
-          class="toolbar__logo"
-          router-link="/"
-          slot="start"
-          src="/logos/papiamento-kids-logo.png"
-      />
-      <ion-title slot="" class="toolbar__title">Papiamento Kids</ion-title>
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only" :ios="ellipsisHorizontal" :md="ellipsisVertical"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <ion-menu menu-id="toolbar-menu" side="end" content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="toolbar-menu__title">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list class="toolbar-menu__list" lines="none">
+        <ion-item button>
+          <ion-label>Create User</ion-label>
+        </ion-item>
+        <ion-item button>
+          <ion-label>Settings</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <base-button @click="closeMenu" label="Close" size="large" />
+  </ion-menu>
+<ion-page id="main-content">
+  <base-toolbar/>
   <ion-content>
     <slot></slot>
   </ion-content>
@@ -45,12 +44,6 @@ import { ellipsisHorizontal, ellipsisVertical, } from 'ionicons/icons';
 </template>
 
 <style scoped>
-.toolbar {
-  height: 4em;
-}
-.toolbar__logo {
-  height: 4em;
-}
 .adds-container {
   background-color: darkcyan;
   height: 4em;
@@ -58,4 +51,11 @@ import { ellipsisHorizontal, ellipsisVertical, } from 'ionicons/icons';
   justify-content: center;
   align-items: center;
 }
+.toolbar-menu__title, .toolbar-menu__list {
+  padding: 0;
+}
+.toolbar-menu__title{
+  padding-left: 0.8em;
+}
+
 </style>

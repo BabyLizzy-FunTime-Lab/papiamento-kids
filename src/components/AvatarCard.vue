@@ -20,7 +20,7 @@ const handleAvatarError = () => {
 
 <template>
   <ion-card class="avatar-card">
-    <ion-avatar>
+    <ion-avatar class="avatar-card__avatar">
       <img
           :src="imageSrc"
           @error="handleAvatarError"
@@ -42,6 +42,11 @@ const handleAvatarError = () => {
   width: 14em;
   height: 14em;
   padding: 2em;
+}
+.avatar-card__avatar {
+  height: 6em;
+  width: 6em;
+  --border-radius: 0.4em;
 }
 @media (min-width: 768px) {
   .avatar-card {

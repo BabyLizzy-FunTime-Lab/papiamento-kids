@@ -5,10 +5,11 @@ import { IonButton} from "@ionic/vue";
 defineOptions({
   name: 'BaseButton'
 })
+defineEmits(['click'])
 
 const props = withDefaults(defineProps<{
   label?: string
-  color?: 'primary' | 'secondary'
+  color?: string
   size?: 'small' | 'medium' | 'large'
   expand?: 'block' | 'full' | undefined
 }>(), {
@@ -34,11 +35,14 @@ const sizeClass = computed(() => {
 
 <template>
 <ion-button
+    @click="$emit('click')"
     type="button"
+    class="btn"
     :class="sizeClass"
     :color="props.color"
     :expand="expand"
     fill="solid"
+    strong
 >
   {{props.label}}
 </ion-button>
