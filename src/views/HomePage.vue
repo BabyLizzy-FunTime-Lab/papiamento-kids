@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Get all the users so they can be rendered.
-import AvatarCard from "@/components/AvatarCard.vue";
+import AvatarCard from "@/components/homePage/AvatarCard.vue";
 import {useLoginStore} from "@/stores/loginStore";
 import {onMounted} from "vue";
 const loginStore = useLoginStore();

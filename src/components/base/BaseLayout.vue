@@ -4,13 +4,35 @@ const title = ref<string>('BaseLayout');
 import {
   IonPage,
   IonContent,
-  IonFooter, IonTitle, IonToolbar, IonHeader, IonMenu, menuController,
+  IonFooter,
+  IonTitle,
+  IonToolbar,
+  IonHeader,
+  IonMenu,
+  menuController,
+  modalController
 } from "@ionic/vue";
 import BaseToolbar from "@/components/base/BaseToolbar.vue";
+import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
+
+const openParentGateModal = async () => {
+  const modal = await modalController.create({
+    component: BaseParentGateModal,
+  });
+
+  await modal.present();
+
+  const { data, role } = await modal.onWillDismiss();
+
+  if (role === 'confirm') {
+    console.log(`Hello, ${data}!`);
+  }
+};
 
 const closeMenu = async () => {
   await menuController.close('toolbar-menu');
 }
+
 </script>
 
 <template>
@@ -22,10 +44,10 @@ const closeMenu = async () => {
     </ion-header>
     <ion-content>
       <ion-list class="toolbar-menu__list" lines="none">
-        <ion-item button>
+        <ion-item button @click="openParentGateModal">
           <ion-label>Create User</ion-label>
         </ion-item>
-        <ion-item button>
+        <ion-item button @click="openParentGateModal">
           <ion-label>Settings</ion-label>
         </ion-item>
       </ion-list>
