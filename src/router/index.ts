@@ -17,11 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'UserHomePage',
         component: () => import('../views/UserHomePage.vue'),
     },
-    // {
-    //     path: '/user-creator',
-    //     name: 'UserCreator',
-    //     component: () => import(),
-    // }
+    {
+        path: '/create-user',
+        name: 'CreateUser',
+        component: () => import('../views/CreateUser.vue'),
+    }
 ]
 
 const router = createRouter({

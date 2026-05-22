@@ -12,20 +12,19 @@ import {
 } from '@ionic/vue';
 import { ref } from 'vue';
 
-const userAnswer = ref();
 const firstNumber = Math.floor(Math.random() * 100);
 const secondNumber = Math.floor(Math.random() * 100);
 const sum = `What is ${firstNumber} + ${secondNumber} =`;
 const sumAnswer = firstNumber + secondNumber;
-let wrongAnswer = false;
+const answerIsWrong = ref(false);
+const userAnswer = ref(null);
 
 const cancel = () => modalController.dismiss(null, 'cancel');
 const confirm = () => {
   if(userAnswer.value == sumAnswer) {
-    modalController.dismiss(userAnswer.value, 'confirm')
+    modalController.dismiss(true, 'confirm')
   } else {
-    console.log("derp");
-    wrongAnswer = true;
+    answerIsWrong.value = true;
   }
 };
 
@@ -47,7 +46,7 @@ const confirm = () => {
     <ion-item>
       <ion-input :label=sum v-model="userAnswer" placeholder="Your answer"></ion-input>
     </ion-item>
-    <ion-item v-if="wrongAnswer">
+    <ion-item v-if="answerIsWrong">
       <ion-text>Wrong answer, please try again</ion-text>
     </ion-item>
   </ion-content>
