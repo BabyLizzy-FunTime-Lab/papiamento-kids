@@ -25,11 +25,4 @@ import BaseToolbar from "@/components/base/BaseToolbar.vue";
   justify-content: center;
   align-items: center;
 }
-.toolbar-menu__title, .toolbar-menu__list {
-  padding: 0;
-}
-.toolbar-menu__title{
-  padding-left: 0.8em;
-}
-
 </style>

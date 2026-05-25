@@ -57,5 +57,10 @@ const openParentGateModal = async (view: string) => {
 </template>
 
 <style scoped>
-
+.toolbar-menu__title, .toolbar-menu__list {
+  padding: 0;
+}
+.toolbar-menu__title{
+  padding-left: 0.8em;
+}
 </style>
