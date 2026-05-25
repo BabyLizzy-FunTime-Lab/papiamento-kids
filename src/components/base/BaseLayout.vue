@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-const title = ref<string>('BaseLayout');
 import {useRouter} from 'vue-router';
 import {
   IonPage, IonContent, IonFooter, IonTitle, IonToolbar,
