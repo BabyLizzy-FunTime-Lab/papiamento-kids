@@ -6,7 +6,6 @@ import {onMounted} from "vue";
 const loginStore = useLoginStore();
 onMounted(async() => {
   await loginStore.load();
-  console.log(loginStore.profiles);
 })
 </script>
 

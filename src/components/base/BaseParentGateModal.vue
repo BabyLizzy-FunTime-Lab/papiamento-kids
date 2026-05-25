@@ -8,6 +8,7 @@ import {
   IonButton,
   IonItem,
   IonInput,
+  IonText,
   modalController,
 } from '@ionic/vue';
 import { ref } from 'vue';
