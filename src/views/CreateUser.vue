@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {
-  IonHeader, IonList, IonItem, IonInput
+  IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonList, IonItem, IonInput
 } from "@ionic/vue";
 import BaseLayout from "@/components/base/BaseLayout.vue";
 </script>
@@ -8,7 +8,14 @@ import BaseLayout from "@/components/base/BaseLayout.vue";
 <template>
  <base-layout>
    <ion-header>
-     <h1>Create new User</h1>
+     <ion-toolbar>
+       <ion-buttons slot="start">
+         <ion-back-button default-href="/home" />
+       </ion-buttons>
+       <ion-title>
+         <h1>Create new User</h1>
+       </ion-title>
+     </ion-toolbar>
    </ion-header>
    <ion-list>
      <ion-item>
