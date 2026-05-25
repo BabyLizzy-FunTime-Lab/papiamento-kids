@@ -1,37 +1,38 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 const title = ref<string>('BaseLayout');
+import {useRouter} from 'vue-router';
 import {
-  IonPage,
-  IonContent,
-  IonFooter,
-  IonTitle,
-  IonToolbar,
-  IonHeader,
-  IonMenu,
-  menuController,
-  modalController
+  IonPage, IonContent, IonFooter, IonTitle, IonToolbar,
+  IonHeader, IonMenu, IonItem, IonLabel, IonList,
+  menuController, modalController
 } from "@ionic/vue";
 import BaseToolbar from "@/components/base/BaseToolbar.vue";
 import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
 
-const openParentGateModal = async () => {
+const router = useRouter();
+
+const closeMenu = async () => {
+  await menuController.close('toolbar-menu');
+}
+
+const openParentGateModal = async (view: string) => {
   const modal = await modalController.create({
     component: BaseParentGateModal,
   });
 
   await modal.present();
 
-  const { data, role } = await modal.onWillDismiss();
+  const { role } = await modal.onWillDismiss();
 
   if (role === 'confirm') {
-    console.log(`Hello, ${data}!`);
+    // console.log(`Hello, ${data}!`);
+    await closeMenu();
+    await router.push({ name: view });
   }
 };
 
-const closeMenu = async () => {
-  await menuController.close('toolbar-menu');
-}
+
 
 </script>
 
@@ -44,25 +45,25 @@ const closeMenu = async () => {
     </ion-header>
     <ion-content>
       <ion-list class="toolbar-menu__list" lines="none">
-        <ion-item button @click="openParentGateModal">
+        <ion-item button @click="openParentGateModal('CreateUser')">
           <ion-label>Create User</ion-label>
         </ion-item>
-        <ion-item button @click="openParentGateModal">
+        <ion-item button @click="openParentGateModal('Settings')">
           <ion-label>Settings</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>
     <base-button @click="closeMenu" label="Close" size="large" />
   </ion-menu>
-<ion-page id="main-content">
-  <base-toolbar/>
-  <ion-content>
-    <slot></slot>
-  </ion-content>
-  <ion-footer class="adds-container">
-    Footer only does adds
-  </ion-footer>
-</ion-page>
+  <ion-page id="main-content">
+    <base-toolbar/>
+    <ion-content>
+      <slot></slot>
+    </ion-content>
+    <ion-footer class="adds-container">
+      Footer only does adds
+    </ion-footer>
+  </ion-page>
 </template>
 
 <style scoped>
