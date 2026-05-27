@@ -8,8 +8,8 @@ const props = defineProps<{
   name?: string
   avatar?: string
 }>()
-const completedAvatarUrl = `/avatars/${props.avatar}`;
-const defaultAvatar = '/avatars/shoco-avatar.png';
+const completedAvatarUrl = `/src/assets/avatars/${props.avatar}`;
+const defaultAvatar = '/src/assets/avatars/shoco-avatar.png';
 const imageSrc = ref(completedAvatarUrl || defaultAvatar );
 const handleAvatarError = () => {
   imageSrc.value = defaultAvatar;
@@ -47,6 +47,7 @@ const handleAvatarError = () => {
   height: 6em;
   width: 6em;
   --border-radius: 0.4em;
+  background-color: deepskyblue;
 }
 @media (min-width: 768px) {
   .avatar-card {

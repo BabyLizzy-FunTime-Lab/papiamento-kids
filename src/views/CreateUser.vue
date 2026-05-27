@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import {
-  IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonList, IonItem, IonInput
+  IonHeader, IonToolbar, IonButtons, IonBackButton,
+  IonTitle, IonList, IonItem, IonInput, IonLabel, IonAvatar
 } from "@ionic/vue";
 import BaseLayout from "@/components/base/BaseLayout.vue";
 import { useAvatars} from "@/composables/useAvatars";
 const { avatars } = useAvatars();
-console.log( avatars)
+console.log(avatars);
+const selectedAvatar = ref<string | undefined>(undefined);
+
 </script>
 
 <template>
@@ -32,7 +36,13 @@ console.log( avatars)
          Pick an avatar:
        </div>
        <div class="avatar-picker__avatar-group">
-         <ion-avatar class="avatar-picker__avatar" v-for="avatar in avatars" :key="avatar.filename">
+         <ion-avatar
+             class="avatar-picker__avatar"
+             v-for="avatar in avatars"
+             :key="avatar.filename"
+             @click="selectedAvatar = avatar.filename"
+             :class="{selected: selectedAvatar === avatar.filename}"
+         >
            <img :src="avatar.url" :alt="avatar.filename">
          </ion-avatar>
        </div>
@@ -49,7 +59,6 @@ console.log( avatars)
   border-radius: 1em;
 }
 .name-input {
-  max-width: 70%;
   margin: 2em auto 2em;
 }
 .avatar-picker__avatar-group {
@@ -69,5 +78,14 @@ console.log( avatars)
   width: 13em;
   height: 13em;
   padding: .5em;
+  background-color: deepskyblue;
+}
+.selected {
+  background-color: limegreen;
+}
+@media (min-width: 768px) {
+  .name-input {
+    max-width: 70%;
+  }
 }
 </style>
