@@ -19,7 +19,7 @@ import BaseToolbar from "@/components/base/BaseToolbar.vue";
 
 <style scoped>
 .adds-container {
-  background-color: darkcyan;
+  background-color: var(--ion-color-tertiary);
   height: 4em;
   display: flex;
   justify-content: center;

@@ -9,12 +9,10 @@ defineEmits(['click'])
 
 const props = withDefaults(defineProps<{
   label?: string
-  color?: string
   size?: 'small' | 'medium' | 'large'
   expand?: 'block' | 'full' | undefined
 }>(), {
   label: 'Button',
-  color: 'primary',
   size: 'medium',
   expand: 'block',
 });
@@ -39,7 +37,6 @@ const sizeClass = computed(() => {
     type="button"
     class="btn"
     :class="sizeClass"
-    :color="props.color"
     :expand="expand"
     fill="solid"
     strong
@@ -49,6 +46,11 @@ const sizeClass = computed(() => {
 </template>
 
 <style scoped>
+.btn {
+  --background: var(--ion-color-primary);
+  --color: white;
+  --border-radius: 2em;
+}
 .btn-small {
   font-size: 12px;
   height: 32px;

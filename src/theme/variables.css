@@ -1,2 +1,71 @@
 /* For information on how to create your own theme, please refer to:
 http://ionicframework.com/docs/theming/ */
+:root {
+    /*Font size*/
+    --font-size-base: 1em;
+    --font-size-medium: 1.5em;
+
+    /*Colors*/
+    --ion-color-primary: #00BFFF;
+    --ion-color-primary-rgb: 0,191,255;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0,0,0;
+    --ion-color-primary-shade: #00a8e0;
+    --ion-color-primary-tint: #1ac5ff;
+
+    --ion-color-secondary: #4ecdc4;
+
+    --ion-color-tertiary: #20B2AA;
+    --ion-color-tertiary-rgb: 32,178,170;
+    --ion-color-tertiary-contrast: #000000;
+    --ion-color-tertiary-contrast-rgb: 0,0,0;
+    --ion-color-tertiary-shade: #1c9d96;
+    --ion-color-tertiary-tint: #36bab3;
+
+
+    --ion-background-color: #FFF5EE;
+    --ion-text-color: #2d3436;
+
+    --ion-toolbar-background: #FFB6C1;
+    --ion-item-background: #FFE4E1;
+    --ion-card-background: #FFE4E1;
+
+
+    --ion-color-kid-blue: #5dade2;
+
+    --ion-avatar-background-color: #40E0D0;
+    --ion-avatar-hover-background-color: #DB7093;
+    --ion-avatar-selected-background-color: #DB7093;
+
+    --ion-color-medium: #FAFAD2;
+    --ion-color-medium-rgb: 250,250,210;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0,0,0;
+    --ion-color-medium-shade: #dcdcb9;
+    --ion-color-medium-tint: #fbfbd7;
+
+    --ion-color-dark: #BDB76B;
+    --ion-color-dark-rgb: 189,183,107;
+    --ion-color-dark-contrast: #000000;
+    --ion-color-dark-contrast-rgb: 0,0,0;
+    --ion-color-dark-shade: #a6a15e;
+    --ion-color-dark-tint: #c4be7a;
+}
+
+/* Dark theme */
+body.dark {
+    --ion-color-dark: #BDB76B;
+    --ion-color-dark-rgb: 189,183,107;
+    --ion-color-dark-contrast: #000000;
+    --ion-color-dark-contrast-rgb: 0,0,0;
+    --ion-color-dark-shade: #a6a15e;
+    --ion-color-dark-tint: #c4be7a;
+
+    --ion-background-color: #1e1e14;
+    --ion-text-color: #FAFAD2;
+
+    --ion-toolbar-background: #2d2b1f;
+    --ion-item-background: #2d2b1f;
+
+    --ion-color-primary: #BDB76B;
+}
