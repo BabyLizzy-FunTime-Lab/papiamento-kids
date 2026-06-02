@@ -10,6 +10,11 @@ import { useAvatars} from "@/composables/useAvatars";
 const { avatars } = useAvatars();
 console.log(avatars);
 const selectedAvatar = ref<string | undefined>(undefined);
+const newUsername = ref<string | undefined>(undefined);
+
+const startUserCreation = () => {
+  console.log(selectedAvatar.value + " " + newUsername.value);
+}
 
 </script>
 
@@ -26,11 +31,11 @@ const selectedAvatar = ref<string | undefined>(undefined);
          </ion-title>
        </ion-toolbar>
      </ion-header>
-     <base-button btn_label="Done" btn_size="large"/>
+     <base-button @click="startUserCreation" btn_label="Done" btn_size="large"/>
      <ion-list class="name">
        <ion-item lines="none">
          <ion-label class="name__label">Name: </ion-label>
-         <ion-input class="name__input" placeholder=" Enter Name" />
+         <ion-input v-model="newUsername" class="name__input" placeholder=" Enter Name" />
        </ion-item>
      </ion-list>
      <div class="avatar-picker">
