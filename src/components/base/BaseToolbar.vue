@@ -34,5 +34,7 @@ import {
 }
 .toolbar__logo {
   height: 4em;
+  border-radius: 0 2em 2em 0;
+  overflow: hidden;
 }
 </style>
