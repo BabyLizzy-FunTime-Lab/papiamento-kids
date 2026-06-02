@@ -34,7 +34,7 @@ import {
 }
 .toolbar__logo {
   height: 4em;
-  border-radius: 0 2em 2em 0;
+  border-radius: 0 var(--ion-standard-border-radius) var(--ion-standard-border-radius) 0;
   overflow: hidden;
 }
 </style>

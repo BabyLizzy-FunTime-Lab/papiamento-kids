@@ -49,7 +49,7 @@ const sizeClass = computed(() => {
 .btn {
   --background: var(--ion-color-primary);
   --color: white;
-  --border-radius: 2em;
+  --border-radius: var(--ion-standard-border-radius);
 }
 .btn-small {
   font-size: 12px;

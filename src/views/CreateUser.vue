@@ -58,7 +58,7 @@ const selectedAvatar = ref<string | undefined>(undefined);
   padding: 2em;
 }
 .create-user--header, .create-user--toolbar, .name {
-  border-radius: 2em;
+  border-radius: var(--ion-standard-border-radius);
 }
 .create-user--header {
   margin-bottom: 1.5em;

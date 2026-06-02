@@ -50,6 +50,9 @@ http://ionicframework.com/docs/theming/ */
     --ion-color-dark-contrast-rgb: 0,0,0;
     --ion-color-dark-shade: #a6a15e;
     --ion-color-dark-tint: #c4be7a;
+
+    /*Border radius*/
+    --ion-standard-border-radius: 2em;
 }
 
 /* Dark theme */
