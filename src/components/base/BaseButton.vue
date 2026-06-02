@@ -8,17 +8,17 @@ defineOptions({
 defineEmits(['click'])
 
 const props = withDefaults(defineProps<{
-  label?: string
-  size?: 'small' | 'medium' | 'large'
-  expand?: 'block' | 'full' | undefined
+  btn_label?: string
+  btn_size?: 'small' | 'medium' | 'large'
+  btn_expand?: 'block' | 'full' | undefined
 }>(), {
-  label: 'Button',
-  size: 'medium',
-  expand: 'block',
+  btn_label: 'Button',
+  btn_size: 'medium',
+  btn_expand: 'block',
 });
 
 const sizeClass = computed(() => {
-  switch (props.size) {
+  switch (props.btn_size) {
     case 'small':
       return 'btn-small';
     case 'medium':
@@ -37,11 +37,11 @@ const sizeClass = computed(() => {
     type="button"
     class="btn"
     :class="sizeClass"
-    :expand="expand"
+    :expand="btn_expand"
     fill="solid"
     strong
 >
-  {{props.label}}
+  {{props.btn_label}}
 </ion-button>
 </template>
 

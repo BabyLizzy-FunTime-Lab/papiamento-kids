@@ -26,7 +26,7 @@ const selectedAvatar = ref<string | undefined>(undefined);
          </ion-title>
        </ion-toolbar>
      </ion-header>
-     <base-button label="Done" size="large"/>
+     <base-button btn_label="Done" btn_size="large"/>
      <ion-list class="name">
        <ion-item lines="none">
          <ion-label class="name__label">Name: </ion-label>
