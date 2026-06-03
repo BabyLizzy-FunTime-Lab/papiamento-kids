@@ -6,14 +6,23 @@ import {
 } from "@ionic/vue";
 import BaseLayout from "@/components/base/BaseLayout.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
+
+import {useLoginStore} from "@/stores/loginStore";
+const loginStore = useLoginStore();
+
 import { useAvatars} from "@/composables/useAvatars";
 const { avatars } = useAvatars();
 console.log(avatars);
 const selectedAvatar = ref<string | undefined>(undefined);
 const newUsername = ref<string | undefined>(undefined);
 
-const startUserCreation = () => {
-  console.log(selectedAvatar.value + " " + newUsername.value);
+const startUserCreation= () => {
+  if(newUsername.value && selectedAvatar.value) {
+    console.log(selectedAvatar.value + " " + newUsername.value);
+    loginStore.createProfile(newUsername.value, selectedAvatar.value);
+  } else {
+    console.log("The User Creator failed, Check inputs.")
+  }
 }
 
 </script>
@@ -35,7 +44,7 @@ const startUserCreation = () => {
      <ion-list class="name">
        <ion-item lines="none">
          <ion-label class="name__label">Name: </ion-label>
-         <ion-input v-model="newUsername" class="name__input" placeholder=" Enter Name" />
+         <ion-input v-model="newUsername" class="name__input" placeholder=" Enter Name" required/>
        </ion-item>
      </ion-list>
      <div class="avatar-picker">

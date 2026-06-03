@@ -31,19 +31,22 @@ export const useLoginStore = defineStore('login', {
             this.activeProfileId = (await storage.get('activeProfileId') || null)
         },
 
-        async createProfile(name: string, avatar_url: string) {
+        async createProfile(name: string, avatar: string) {
             const storage = getStorage();
 
             const profile: Profile = {
                 id: crypto.randomUUID(),
                 name,
-                avatar_url,
+                avatar,
                 createdAt: Date.now(),
                 lessonProgress: []
             }
 
             this.profiles.push(profile)
-            await storage.set('profiles', this.profiles)
+            console.log(this.profiles);
+            console.log(this.profiles.constructor.name);
+            // await storage.set('profiles', this.profiles)
+            await storage.set('profiles', JSON.parse(JSON.stringify(this.profiles)));
 
             this.activeProfileId = profile.id
             await storage.set('activeProfileId', profile.id)
