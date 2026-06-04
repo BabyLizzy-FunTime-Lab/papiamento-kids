@@ -11,7 +11,6 @@ import {
 import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
 
 import {useRouter} from 'vue-router';
-
 const router = useRouter();
 
 const closeMenu = async () => {

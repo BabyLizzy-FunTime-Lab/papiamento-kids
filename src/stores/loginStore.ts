@@ -43,8 +43,6 @@ export const useLoginStore = defineStore('login', {
             }
 
             this.profiles.push(profile)
-            console.log(this.profiles);
-            console.log(this.profiles.constructor.name);
             // await storage.set('profiles', this.profiles)
             await storage.set('profiles', JSON.parse(JSON.stringify(this.profiles)));
 

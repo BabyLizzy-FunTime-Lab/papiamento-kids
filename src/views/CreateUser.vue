@@ -10,16 +10,24 @@ import BaseButton from "@/components/base/BaseButton.vue";
 import {useLoginStore} from "@/stores/loginStore";
 const loginStore = useLoginStore();
 
+import {useRouter} from 'vue-router';
+const router = useRouter();
+
 import { useAvatars} from "@/composables/useAvatars";
 const { avatars } = useAvatars();
-console.log(avatars);
+
 const selectedAvatar = ref<string | undefined>(undefined);
 const newUsername = ref<string | undefined>(undefined);
 
-const startUserCreation= () => {
+const startUserCreation= async (): Promise<void> => {
   if(newUsername.value && selectedAvatar.value) {
-    console.log(selectedAvatar.value + " " + newUsername.value);
-    loginStore.createProfile(newUsername.value, selectedAvatar.value);
+    await loginStore.createProfile(
+        newUsername.value,
+        selectedAvatar.value
+    );
+
+    (document.activeElement as HTMLElement)?.blur();
+    await router.push({ name: 'Home' });
   } else {
     console.log("The User Creator failed, Check inputs.")
   }

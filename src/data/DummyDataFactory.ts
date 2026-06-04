@@ -1,5 +1,15 @@
 import type {Profile} from "@/types/profile";
 
+const guestProfile: Profile =
+    {
+        id: "u12",
+        name: "Guest",
+        avatar: "tree-avatar.jpg",
+        createdAt: Date.now(),
+        lessonProgress: []
+    };
+
+
 const dummyProfiles: Profile[] = [
     {
         id: "u12",
@@ -96,5 +106,8 @@ const dummyProfiles: Profile[] = [
 export class DummyDataFactory {
     static getDummyProfiles(): Profile[] {
         return dummyProfiles;
+    }
+    static getGuestProfile(): Profile {
+        return guestProfile;
     }
 }
