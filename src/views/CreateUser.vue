@@ -29,7 +29,8 @@ const startUserCreation= async (): Promise<void> => {
     (document.activeElement as HTMLElement)?.blur();
     await router.push({ name: 'Home' });
   } else {
-    console.log("The User Creator failed, Check inputs.")
+    console.log("The User Creator failed, Check inputs.");
+
   }
 }
 
