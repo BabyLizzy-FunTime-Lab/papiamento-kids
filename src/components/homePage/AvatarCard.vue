@@ -8,6 +8,7 @@ const props = defineProps<{
   name?: string
   avatar?: string
 }>()
+
 const completedAvatarUrl = `/src/assets/avatars/${props.avatar}`;
 const defaultAvatar = '/src/assets/avatars/shoco-avatar.png';
 const imageSrc = ref(completedAvatarUrl || defaultAvatar );

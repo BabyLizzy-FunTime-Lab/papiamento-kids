@@ -4,9 +4,18 @@ import AvatarCard from "@/components/homePage/AvatarCard.vue";
 import {useLoginStore} from "@/stores/loginStore";
 import {onMounted} from "vue";
 const loginStore = useLoginStore();
+
+import {useRouter} from "vue-router";
+const router = useRouter();
+
 onMounted(async() => {
   await loginStore.load();
 })
+
+const goToUserHomePage = async (id: string) =>{
+  await loginStore.setActiveProfile(id);
+  await router.push({name: 'UserHomePage'})
+}
 </script>
 
 <template>
@@ -17,6 +26,7 @@ onMounted(async() => {
           :key="profile.id"
           :name="profile.name"
           :avatar="profile.avatar"
+          @click="goToUserHomePage(profile.id)"
       />
     </div>
   </base-layout>

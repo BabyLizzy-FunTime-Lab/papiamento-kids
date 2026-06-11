@@ -50,11 +50,10 @@ export const useLoginStore = defineStore('login', {
             await storage.set('activeProfileId', profile.id)
         },
 
-        async selectProfile(id: string) {
+        async setActiveProfile(id: string) {
             const storage = getStorage();
-
-            this.activeProfileId = id
-            await storage.set('activeProfileId', id)
+            this.activeProfileId = id;
+            await storage.set('activeProfileId', id);
         }
     }
 })

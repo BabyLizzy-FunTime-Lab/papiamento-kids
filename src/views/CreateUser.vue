@@ -2,10 +2,11 @@
 import { ref } from 'vue'
 import {
   IonHeader, IonToolbar, IonButtons, IonBackButton,
-  IonTitle, IonList, IonItem, IonInput, IonLabel, IonAvatar
+  IonTitle, IonList, IonItem, IonInput, IonLabel, IonAvatar, modalController
 } from "@ionic/vue";
 import BaseLayout from "@/components/base/BaseLayout.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
+import BaseErrorModal from "@/components/base/BaseErrorModal.vue";
 
 import {useLoginStore} from "@/stores/loginStore";
 const loginStore = useLoginStore();
@@ -25,12 +26,17 @@ const startUserCreation= async (): Promise<void> => {
         newUsername.value,
         selectedAvatar.value
     );
-
     (document.activeElement as HTMLElement)?.blur();
     await router.push({ name: 'Home' });
   } else {
     console.log("The User Creator failed, Check inputs.");
-
+    const errorModal = await modalController.create({
+      component: BaseErrorModal,
+      componentProps: {
+        errorMessage: "The user creation failed. Please input a name and choose an avatar."
+      }
+    })
+    await errorModal.present();
   }
 }
 
