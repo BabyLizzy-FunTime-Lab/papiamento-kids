@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import { IonicVue } from '@ionic/vue';
 import { createPinia } from 'pinia';
+import {useLoginStore} from "@/stores/loginStore";
 
 import App from './App.vue';
 import router from './router';
@@ -52,6 +53,9 @@ async function bootstrap(){
 
 
     await initStorage();
+    const loginStore = useLoginStore();
+    await loginStore.load();
+
     await router.isReady();
 
     app.mount('#app');

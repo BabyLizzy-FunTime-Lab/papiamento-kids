@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import {
   IonContent,
-  IonHeader, IonItem,
+  IonHeader,
+  IonItem,
   IonLabel,
   IonList,
   IonMenu,
   IonTitle,
-  IonToolbar,  menuController, modalController
+  IonToolbar,
+  menuController,
+  modalController
 } from '@ionic/vue';
 import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
 

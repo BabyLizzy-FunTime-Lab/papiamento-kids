@@ -1,25 +1,24 @@
 <script setup lang="ts">
+import {computed} from "vue";
 import {useLoginStore} from "@/stores/loginStore";
-import type {Profile} from "@/types/profile";
 
 const loginStore = useLoginStore();
-const userProfile: Profile | null = loginStore.getActiveProfile;
+const userProfile = computed(
+    () => loginStore.getActiveProfile
+);
 
-const props = withDefaults(defineProps<{
-  name?: string
-}>(), {
-  name: 'Guest',
-})
+// const props = withDefaults(defineProps<{
+//   name?: string
+// }>(), {
+//   name: 'Guest',
+// })
 </script>
 
 <template>
   <base-layout>
     <div class="center-container">
-      Welcome, {{ userProfile.name }}!
-      <base-button
-          label="Start"
-          size="large"
-      />
+      Welcome, {{ userProfile?.name ?? "Guest" }}!
+
     </div>
   </base-layout>
 </template>
