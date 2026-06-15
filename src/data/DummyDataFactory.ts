@@ -4,7 +4,7 @@ const guestProfile: Profile =
     {
         id: "u12",
         name: "Guest",
-        avatar: "tree-avatar.jpg",
+        avatar: "/src/assets/avatars/tree-avatar.jpg",
         createdAt: Date.now(),
         lessonProgress: []
     };

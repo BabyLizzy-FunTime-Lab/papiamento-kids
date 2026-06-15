@@ -71,7 +71,7 @@ const startUserCreation= async (): Promise<void> => {
              class="avatar-picker__avatar"
              v-for="avatar in avatars"
              :key="avatar.filename"
-             @click="selectedAvatar = avatar.filename"
+             @click="selectedAvatar = avatar.url"
              :class="{selected: selectedAvatar === avatar.filename}"
          >
            <img :src="avatar.url" :alt="avatar.filename">

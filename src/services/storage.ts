@@ -16,6 +16,7 @@ export async function initStorage(): Promise<void> {
     const profiles: Profile[] = await storage.get("profiles");
     if (!profiles || profiles.length === 0) {
         await storage.set('profiles', [guestProfile]);
+        await storage.set('activeProfileId', guestProfile.id);
     }
 
     // Seed with dummy data //

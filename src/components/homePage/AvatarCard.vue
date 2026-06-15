@@ -9,9 +9,9 @@ const props = defineProps<{
   avatar?: string
 }>()
 
-const completedAvatarUrl = `/src/assets/avatars/${props.avatar}`;
-const defaultAvatar = '/src/assets/avatars/shoco-avatar.png';
-const imageSrc = ref(completedAvatarUrl || defaultAvatar );
+// const completedAvatarUrl = `/src/assets/avatars/${props.avatar}`;
+// const defaultAvatar = '/src/assets/avatars/shoco-avatar.png';
+// const imageSrc = ref(completedAvatarUrl || defaultAvatar );
 const handleAvatarError = () => {
   imageSrc.value = defaultAvatar;
 }
@@ -23,7 +23,7 @@ const handleAvatarError = () => {
   <ion-card class="avatar-card">
     <ion-avatar class="avatar-card__avatar">
       <img
-          :src="imageSrc"
+          :src="props.avatar"
           @error="handleAvatarError"
           alt="Avatar image"
       />

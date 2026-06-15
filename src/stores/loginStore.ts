@@ -21,6 +21,9 @@ export const useLoginStore = defineStore('login', {
             return (
                 state.profiles.find(profile => profile.id === state.activeProfileId) || null
             )
+        },
+        getDefaultAvatar(): string {
+            return '/src/assets/avatars/shoco-avatar.png';
         }
     },
     actions: {

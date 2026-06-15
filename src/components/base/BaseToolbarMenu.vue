@@ -14,7 +14,14 @@ import {
 import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
 
 import {useRouter} from 'vue-router';
+import {useLoginStore} from "@/stores/loginStore";
+import {computed} from "vue";
 const router = useRouter();
+
+const loginStore = useLoginStore();
+const userProfile = computed(
+    () => loginStore.getActiveProfile
+);
 
 const closeMenu = async () => {
   await menuController.close('toolbar-menu');
@@ -46,6 +53,9 @@ const openParentGateModal = async (view: string) => {
     </ion-header>
     <ion-content>
       <ion-list class="toolbar-menu__list" lines="none">
+        <ion-item button @click="openParentGateModal('UserProfile')">
+          <ion-label>User Profile: {{ userProfile?.name ?? "Guest" }} </ion-label>
+        </ion-item>
         <ion-item button @click="openParentGateModal('CreateUser')">
           <ion-label>Create User</ion-label>
         </ion-item>
