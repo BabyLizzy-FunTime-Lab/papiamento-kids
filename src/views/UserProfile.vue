@@ -1,16 +1,26 @@
 <script setup lang="ts">
-import BaseLayout from "@/components/base/BaseLayout.vue";
-
-import {useLoginStore} from "@/stores/loginStore";
-import {computed} from "vue";
 import {
   IonBackButton, IonButtons, IonHeader, IonTitle,
   IonToolbar, IonList, IonInput, IonAvatar, IonItem,
 } from "@ionic/vue";
+import BaseLayout from "@/components/base/BaseLayout.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
+import {useRouter} from "vue-router";
+const router = useRouter();
+import {computed} from "vue";
 
+import {useLoginStore} from "@/stores/loginStore";
 const loginStore = useLoginStore();
 const userProfile = computed(() => loginStore.getActiveProfile);
+
+import {useParentGateModal} from "@/composables/useParentGateModal";
+const {openParentGateModal} = useParentGateModal();
+
+const parentGateModal = async (view: string) => {
+  if (await openParentGateModal()) {
+    await router.push({ name: view });
+  }
+};
 
 </script>
 
@@ -42,7 +52,11 @@ const userProfile = computed(() => loginStore.getActiveProfile);
       <ion-item class="user-profile__item" lines="none">
         <ion-input label="Name:" :value="userProfile?.name" label-placement="floating" />
       </ion-item>
-      <base-button  class="user-profile__btn" btn_label="Update"/>
+      <base-button
+          @click="parentGateModal('CreateUpdateUser')"
+          class="user-profile__btn"
+          btn_label="Update"
+      />
     </ion-list>
 
   </div>
