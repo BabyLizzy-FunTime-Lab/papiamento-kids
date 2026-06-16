@@ -9,14 +9,15 @@ import {
   IonTitle,
   IonToolbar,
   menuController,
-  modalController
 } from '@ionic/vue';
-import BaseParentGateModal from "@/components/base/BaseParentGateModal.vue";
 
 import {useRouter} from 'vue-router';
 import {useLoginStore} from "@/stores/loginStore";
 import {computed} from "vue";
 const router = useRouter();
+
+import {useParentGateModal} from "@/composables/useParentGateModal";
+const {openParentGateModal} = useParentGateModal();
 
 const loginStore = useLoginStore();
 const userProfile = computed(
@@ -27,16 +28,8 @@ const closeMenu = async () => {
   await menuController.close('toolbar-menu');
 }
 
-const openParentGateModal = async (view: string) => {
-  const modal = await modalController.create({
-    component: BaseParentGateModal,
-  });
-
-  await modal.present();
-
-  const { role } = await modal.onWillDismiss();
-
-  if (role === 'confirm') {
+const parentGateModal = async (view: string) => {
+  if (await openParentGateModal()) {
     // console.log(`Hello, ${data}!`);
     await closeMenu();
     await router.push({ name: view });
@@ -53,13 +46,13 @@ const openParentGateModal = async (view: string) => {
     </ion-header>
     <ion-content>
       <ion-list class="toolbar-menu__list" lines="none">
-        <ion-item button @click="openParentGateModal('UserProfile')">
+        <ion-item button @click="parentGateModal('UserProfile')">
           <ion-label>User Profile: {{ userProfile?.name ?? "Guest" }} </ion-label>
         </ion-item>
-        <ion-item button @click="openParentGateModal('CreateUser')">
+        <ion-item button @click="parentGateModal('CreateUser')">
           <ion-label>Create User</ion-label>
         </ion-item>
-        <ion-item button @click="openParentGateModal('Settings')">
+        <ion-item button @click="parentGateModal('Settings')">
           <ion-label>Settings</ion-label>
         </ion-item>
       </ion-list>

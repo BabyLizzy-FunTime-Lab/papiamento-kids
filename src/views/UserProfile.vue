@@ -3,7 +3,10 @@ import BaseLayout from "@/components/base/BaseLayout.vue";
 
 import {useLoginStore} from "@/stores/loginStore";
 import {computed} from "vue";
-import {IonBackButton, IonButtons, IonHeader, IonTitle, IonToolbar} from "@ionic/vue";
+import {
+  IonBackButton, IonButtons, IonHeader, IonTitle,
+  IonToolbar, IonList, IonInput, IonAvatar, IonItem,
+} from "@ionic/vue";
 import BaseButton from "@/components/base/BaseButton.vue";
 
 const loginStore = useLoginStore();
@@ -28,18 +31,18 @@ const userProfile = computed(() => loginStore.getActiveProfile);
       <ion-list>
         <ion-avatar class="user-profile__avatar">
           <img
-            :src="userProfile.avatar"
+            :src="userProfile?.avatar"
             alt="user avatar"
           />
         </ion-avatar>
       </ion-list>
       <ion-item class="user-profile__item" lines="none">
-        <ion-input label="ID: " :value="userProfile.id" label-placement="floating" />
+        <ion-input label="ID: " :value="userProfile?.id" label-placement="floating" />
       </ion-item>
       <ion-item class="user-profile__item" lines="none">
-        <ion-input label="Name:" :value="userProfile.name" label-placement="floating" />
+        <ion-input label="Name:" :value="userProfile?.name" label-placement="floating" />
       </ion-item>
-      <base-button class="user-profile__btn" btn_label="Update"/>
+      <base-button  class="user-profile__btn" btn_label="Update"/>
     </ion-list>
 
   </div>
@@ -111,10 +114,17 @@ const userProfile = computed(() => loginStore.getActiveProfile);
   }
 }
 @media only screen and (min-width: 1200px) {
+  .user-profile--container {
+    max-width: 50%;
+    margin: auto;
+  }
   .user-profile__item {
     width: 25em;
     margin: auto;
     overflow: auto;
+  }
+  .user-profile__btn {
+    max-width: 40%;
   }
 }
 </style>
