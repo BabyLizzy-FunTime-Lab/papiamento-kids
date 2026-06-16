@@ -49,7 +49,7 @@ const parentGateModal = async (view: string) => {
         <ion-item button @click="parentGateModal('UserProfile')">
           <ion-label>User Profile: {{ userProfile?.name ?? "Guest" }} </ion-label>
         </ion-item>
-        <ion-item button @click="parentGateModal('CreateUser')">
+        <ion-item button @click="parentGateModal('CreateUpdateUser')">
           <ion-label>Create User</ion-label>
         </ion-item>
         <ion-item button @click="parentGateModal('Settings')">
