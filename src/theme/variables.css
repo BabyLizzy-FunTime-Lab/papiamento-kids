@@ -53,6 +53,12 @@ http://ionicframework.com/docs/theming/ */
 
     /*Border radius*/
     --ion-standard-border-radius: 2em;
+
+    /*Standaard dimensions*/
+    --ion-standard-border-width: 1px;
+
+    /* min-width: 1200px */
+    --ion-standard-main-conatainer-width: 80%;
 }
 
 /* Dark theme */

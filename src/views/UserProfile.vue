@@ -73,7 +73,7 @@ const parentGateModal = async (view: string) => {
   width: 15em;
   margin: 1em auto 1em;
   border: solid .2em var(--ion-color-tertiary);
-  --border-radius: 3em;
+  --border-radius: var(--ion-standard-border-radius);
 }
 .user-profile__item {
   max-width: 50%;

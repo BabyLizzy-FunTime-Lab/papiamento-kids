@@ -40,7 +40,7 @@ const goToUserHomePage = async (id: string) =>{
   padding-bottom: 2em;
   min-height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 1em;
   row-gap: 1em;
@@ -50,6 +50,12 @@ const goToUserHomePage = async (id: string) =>{
 @media (min-width: 768px) {
   .center-container {
     padding: 4rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .center-container {
+    max-width: var(--ion-standard-main-conatainer-width);
+    margin: auto;
   }
 }
 </style>

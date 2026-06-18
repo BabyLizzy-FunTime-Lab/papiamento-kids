@@ -18,9 +18,9 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../views/UserHomePage.vue'),
     },
     {
-        path: '/create-update-user',
-        name: 'CreateUpdateUser',
-        component: () => import('../views/CreateUpdateUser.vue'),
+        path: '/user-form',
+        name: 'UserForm',
+        component: () => import('../views/UserForm.vue'),
     },
     {
         path: '/user-profile',
