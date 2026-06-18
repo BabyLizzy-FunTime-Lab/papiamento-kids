@@ -46,11 +46,11 @@ const parentGateModal = async (view: string) => {
           />
         </ion-avatar>
       </ion-list>
-      <ion-item class="user-profile__item" lines="none">
-        <ion-input label="ID: " :value="userProfile?.id" label-placement="floating" />
+      <ion-item class="user-profile__item" >
+        <ion-input label="ID: " :value="userProfile?.id" label-placement="stacked" readonly/>
       </ion-item>
-      <ion-item class="user-profile__item" lines="none">
-        <ion-input label="Name:" :value="userProfile?.name" label-placement="floating" />
+      <ion-item class="user-profile__item">
+        <ion-input label="Name:" :value="userProfile?.name" label-placement="stacked" readonly/>
       </ion-item>
       <base-button
           @click="parentGateModal('CreateUpdateUser')"
@@ -80,6 +80,7 @@ const parentGateModal = async (view: string) => {
   margin: auto;
   overflow: scroll;
   font-size: 1.2em;
+  text-align: center;
 }
 .user-profile__btn {
   max-width: 80%;
