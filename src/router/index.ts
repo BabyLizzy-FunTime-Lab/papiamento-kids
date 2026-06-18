@@ -18,9 +18,16 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../views/UserHomePage.vue'),
     },
     {
-        path: '/user-form',
-        name: 'UserForm',
+        path: '/user-form/create',
+        name: 'UserFormCreate',
         component: () => import('../views/UserForm.vue'),
+        props: {mode: 'create'},
+    },
+    {
+        path: '/user-form/edit',
+        name: 'UserFormEdit',
+        component: () => import('../views/UserForm.vue'),
+        props: {mode: 'edit'},
     },
     {
         path: '/user-profile',

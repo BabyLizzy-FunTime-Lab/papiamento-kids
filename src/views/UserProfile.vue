@@ -53,7 +53,7 @@ const parentGateModal = async (view: string) => {
         <ion-input label="Name:" :value="userProfile?.name" label-placement="stacked" readonly/>
       </ion-item>
       <base-button
-          @click="parentGateModal('UserForm')"
+          @click="parentGateModal('UserFormEdit')"
           class="user-profile__btn"
           btn_label="Update"
       />

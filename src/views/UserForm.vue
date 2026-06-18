@@ -2,11 +2,16 @@
 import { ref } from 'vue'
 import {
   IonHeader, IonToolbar, IonButtons, IonBackButton,
-  IonTitle, IonList, IonItem, IonInput, IonLabel, IonAvatar, modalController
+  IonTitle, IonList, IonItem, IonInput, IonLabel,
+  IonAvatar, modalController
 } from "@ionic/vue";
 import BaseLayout from "@/components/base/BaseLayout.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
 import BaseErrorModal from "@/components/base/BaseErrorModal.vue";
+
+const props = defineProps<{
+  mode: "create" | "edit",
+}>();
 
 import {useLoginStore} from "@/stores/loginStore";
 const loginStore = useLoginStore();
@@ -40,6 +45,12 @@ const startUserCreation= async (): Promise<void> => {
   }
 }
 
+const startUpdateUser = async (): Promise<void> => {
+  console.log("Update user");
+}
+const startDeleteUser = async (): Promise<void> => {
+  console.log("Delete user");
+}
 </script>
 
 <template>
@@ -55,7 +66,25 @@ const startUserCreation= async (): Promise<void> => {
          </ion-title>
        </ion-toolbar>
      </ion-header>
-     <base-button @click="startUserCreation" btn_label="Done" btn_size="large"/>
+     <base-button
+         v-if="props.mode === 'create' && selectedAvatar && newUsername"
+         @click="startUserCreation"
+         btn_label="Create"
+         btn_size="large"
+     />
+     <div class="user-btn-container"  v-if="props.mode === 'edit'">
+       <base-button
+           class="base"
+           @click="startUpdateUser"
+           btn_label="Update"
+           btn_size="medium"
+       />
+       <base-button
+           @click="startDeleteUser"
+           btn_label="Delete"
+           btn_size="medium"
+       />
+     </div>
      <ion-list class="name">
        <ion-item lines="none">
          <ion-label class="name__label">Name: </ion-label>
@@ -72,7 +101,7 @@ const startUserCreation= async (): Promise<void> => {
              v-for="avatar in avatars"
              :key="avatar.filename"
              @click="selectedAvatar = avatar.url"
-             :class="{selected: selectedAvatar === avatar.filename}"
+             :class="{selected: selectedAvatar === avatar.url}"
          >
            <img :src="avatar.url" :alt="avatar.filename">
          </ion-avatar>
@@ -91,6 +120,12 @@ const startUserCreation= async (): Promise<void> => {
 }
 .create-user--header {
   margin-bottom: 1.5em;
+}
+.user-btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 .name {
   margin: 1.5em auto 2em;
