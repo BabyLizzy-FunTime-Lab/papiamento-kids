@@ -55,9 +55,9 @@ const startDeleteUser = async (): Promise<void> => {
 
 <template>
  <base-layout>
-   <div class="create-user--container">
-     <ion-header class="create-user--header">
-       <ion-toolbar class="create-user--toolbar">
+   <div class="user-form--container">
+     <ion-header class="user-form--header">
+       <ion-toolbar class="user-form--toolbar">
          <ion-buttons slot="start">
            <ion-back-button default-href="/home" />
          </ion-buttons>
@@ -72,7 +72,7 @@ const startDeleteUser = async (): Promise<void> => {
          btn_label="Create"
          btn_size="large"
      />
-     <div class="user-btn-container"  v-if="props.mode === 'edit'">
+     <div class="user-form-btn-container"  v-if="props.mode === 'edit'">
        <base-button
            class="base"
            @click="startUpdateUser"
@@ -81,6 +81,7 @@ const startDeleteUser = async (): Promise<void> => {
        />
        <base-button
            @click="startDeleteUser"
+           btn_color="danger"
            btn_label="Delete"
            btn_size="medium"
        />
@@ -112,16 +113,16 @@ const startDeleteUser = async (): Promise<void> => {
 </template>
 
 <style scoped>
-.create-user--container {
+.user-form--container {
   padding: 2em;
 }
-.create-user--header, .create-user--toolbar, .name {
+.user-form--header, .user-form--toolbar, .name {
   border-radius: var(--ion-standard-border-radius);
 }
-.create-user--header {
+.user-form--header {
   margin-bottom: 1.5em;
 }
-.user-btn-container {
+.user-form-btn-container {
   display: flex;
   justify-content: space-between;
   padding-left: 2em;
@@ -173,19 +174,19 @@ const startDeleteUser = async (): Promise<void> => {
   }
 }
 @media screen and (orientation: landscape) and (min-width: 992px) {
-  .create-user--container {
+  .user-form--container {
     margin: auto;
     max-width: 90%;
   }
 }
 @media screen and (orientation: portrait ) and (min-width: 992px)  {
-  .create-user--container {
+  .user-form--container {
     margin: auto;
     max-width: 70%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .create-user--container {
+  .user-form--container {
     margin: auto;
     max-width: 60%;
   }

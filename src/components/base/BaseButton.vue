@@ -11,10 +11,12 @@ const props = withDefaults(defineProps<{
   btn_label?: string
   btn_size?: 'small' | 'medium' | 'large'
   btn_expand?: 'block' | 'full' | undefined
+  btn_color?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
 }>(), {
   btn_label: 'Button',
   btn_size: 'medium',
   btn_expand: 'block',
+  btn_color: 'primary',
 });
 
 const sizeClass = computed(() => {
@@ -38,6 +40,7 @@ const sizeClass = computed(() => {
     class="btn"
     :class="sizeClass"
     :expand="btn_expand"
+    :color="btn_color"
     fill="solid"
     strong
 >
