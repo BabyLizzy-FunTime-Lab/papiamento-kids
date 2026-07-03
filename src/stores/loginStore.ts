@@ -22,6 +22,11 @@ export const useLoginStore = defineStore('login', {
                 state.profiles.find(profile => profile.id === state.activeProfileId) || null
             )
         },
+        getGuestProfile(state): Profile | null {
+            return (
+                state.profiles.find(profile => profile.name === 'Guest') || null
+            )
+        },
         getDefaultAvatar(): string {
             return '/src/assets/avatars/shoco-avatar.png';
         }
@@ -33,7 +38,11 @@ export const useLoginStore = defineStore('login', {
             this.profiles = (await storage.get('profiles') || [])
             this.activeProfileId = (await storage.get('activeProfileId') || null)
         },
-
+        async setActiveProfile(id: string) {
+            const storage = getStorage();
+            this.activeProfileId = id;
+            await storage.set('activeProfileId', id);
+        },
         async createProfile(name: string, avatar: string) {
             const storage = getStorage();
 
@@ -52,11 +61,17 @@ export const useLoginStore = defineStore('login', {
             this.activeProfileId = profile.id
             await storage.set('activeProfileId', profile.id)
         },
+        async updateProfile(profile: Profile): Promise<void> {
 
-        async setActiveProfile(id: string) {
-            const storage = getStorage();
-            this.activeProfileId = id;
-            await storage.set('activeProfileId', id);
-        }
+        },
+        async deleteProfile(profile: Profile): Promise<void> {
+            this.profiles.splice(this.profiles.indexOf(profile), 1);
+            const guestProfile = this.getGuestProfile;
+            if (!guestProfile) {
+                throw new Error("Guest profile not found.");
+            }
+            await this.setActiveProfile(guestProfile.id);
+        },
+
     }
 })

@@ -48,8 +48,19 @@ const startUserCreation= async (): Promise<void> => {
 const startUpdateUser = async (): Promise<void> => {
   console.log("Update user");
 }
+const CancelUpdate = async (): Promise<void> => {
+  console.log("Cancel update");
+  (document.activeElement as HTMLElement)?.blur();
+  await router.push({ name: 'UserHomePage' });
+}
 const startDeleteUser = async (): Promise<void> => {
   console.log("Delete user");
+  if(loginStore.getActiveProfile) {
+    await loginStore.deleteProfile(loginStore.getActiveProfile);
+    (document.activeElement as HTMLElement)?.blur();
+    await router.push({ name: 'Home' });
+  }
+
 }
 </script>
 
@@ -61,8 +72,11 @@ const startDeleteUser = async (): Promise<void> => {
          <ion-buttons slot="start">
            <ion-back-button default-href="/home" />
          </ion-buttons>
-         <ion-title>
+         <ion-title v-if="props.mode === 'create'">
            Create new User
+         </ion-title>
+         <ion-title v-if="props.mode === 'edit'">
+           Update User
          </ion-title>
        </ion-toolbar>
      </ion-header>
@@ -74,9 +88,14 @@ const startDeleteUser = async (): Promise<void> => {
      />
      <div class="user-form-btn-container"  v-if="props.mode === 'edit'">
        <base-button
-           class="base"
            @click="startUpdateUser"
            btn_label="Update"
+           btn_size="medium"
+       />
+       <base-button
+           @click="CancelUpdate"
+           btn_color="secondary"
+           btn_label="Cancel"
            btn_size="medium"
        />
        <base-button
