@@ -1,0 +1,212 @@
+[
+  {
+    "id": "object_tape",
+    "category": "school",
+    "tags": ["craft", "office", "school"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "teip",
+      "nl": "plakband",
+      "en": "tape",
+      "es": "cinta adhesiva"
+    },
+    "media": {
+      "image": "images/school/object_tape.webp",
+      "audio": {
+        "pap": "audio/pap/object_tape.mp3",
+        "nl": "audio/nl/object_tape.mp3",
+        "en": "audio/en/object_tape.mp3",
+        "es": "audio/es/object_tape.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_lunchbox",
+    "category": "school",
+    "tags": ["food", "school", "personal"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "lonchbox",
+      "nl": "broodtrommel",
+      "en": "lunchbox",
+      "es": "lonchera"
+    },
+    "media": {
+      "image": "images/school/object_lunchbox.webp",
+      "audio": {
+        "pap": "audio/pap/object_lunchbox.mp3",
+        "nl": "audio/nl/object_lunchbox.mp3",
+        "en": "audio/en/object_lunchbox.mp3",
+        "es": "audio/es/object_lunchbox.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_name_tag",
+    "category": "school",
+    "tags": ["identity", "school", "classroom"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "nòmber",
+      "nl": "naamkaartje",
+      "en": "name tag",
+      "es": "etiqueta con nombre"
+    },
+    "media": {
+      "image": "images/school/object_name_tag.webp",
+      "audio": {
+        "pap": "audio/pap/object_name_tag.mp3",
+        "nl": "audio/nl/object_name_tag.mp3",
+        "en": "audio/en/object_name_tag.mp3",
+        "es": "audio/es/object_name_tag.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_crayon_box",
+    "category": "art",
+    "tags": ["drawing", "coloring", "container"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "kaha di krayòn",
+      "nl": "kleurdoos",
+      "en": "crayon box",
+      "es": "caja de crayones"
+    },
+    "media": {
+      "image": "images/art/object_crayon_box.webp",
+      "audio": {
+        "pap": "audio/pap/object_crayon_box.mp3",
+        "nl": "audio/nl/object_crayon_box.mp3",
+        "en": "audio/en/object_crayon_box.mp3",
+        "es": "audio/es/object_crayon_box.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_paint",
+    "category": "art",
+    "tags": ["art", "painting", "color"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "pintura",
+      "nl": "verf",
+      "en": "paint",
+      "es": "pintura"
+    },
+    "media": {
+      "image": "images/art/object_paint.webp",
+      "audio": {
+        "pap": "audio/pap/object_paint.mp3",
+        "nl": "audio/nl/object_paint.mp3",
+        "en": "audio/en/object_paint.mp3",
+        "es": "audio/es/object_paint.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_paintbrush",
+    "category": "art",
+    "tags": ["art", "painting", "brush"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "pinsel",
+      "nl": "kwast",
+      "en": "paintbrush",
+      "es": "pincel"
+    },
+    "media": {
+      "image": "images/art/object_paintbrush.webp",
+      "audio": {
+        "pap": "audio/pap/object_paintbrush.mp3",
+        "nl": "audio/nl/object_paintbrush.mp3",
+        "en": "audio/en/object_paintbrush.mp3",
+        "es": "audio/es/object_paintbrush.mp3"
+      }
+    }
+  },
+  {
+    "id": "person_boy",
+    "category": "people",
+    "tags": ["person", "child", "classroom"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "yu hòmber",
+      "nl": "jongen",
+      "en": "boy",
+      "es": "niño"
+    },
+    "media": {
+      "image": "images/people/person_boy.webp",
+      "audio": {
+        "pap": "audio/pap/person_boy.mp3",
+        "nl": "audio/nl/person_boy.mp3",
+        "en": "audio/en/person_boy.mp3",
+        "es": "audio/es/person_boy.mp3"
+      }
+    }
+  },
+  {
+    "id": "person_girl",
+    "category": "people",
+    "tags": ["person", "child", "classroom"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "yu muhé",
+      "nl": "meisje",
+      "en": "girl",
+      "es": "niña"
+    },
+    "media": {
+      "image": "images/people/person_girl.webp",
+      "audio": {
+        "pap": "audio/pap/person_girl.mp3",
+        "nl": "audio/nl/person_girl.mp3",
+        "en": "audio/en/person_girl.mp3",
+        "es": "audio/es/person_girl.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_desk",
+    "category": "furniture",
+    "tags": ["classroom", "furniture", "workspace"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "banki",
+      "nl": "schooltafel",
+      "en": "desk",
+      "es": "pupitre"
+    },
+    "media": {
+      "image": "images/furniture/object_desk.webp",
+      "audio": {
+        "pap": "audio/pap/object_desk.mp3",
+        "nl": "audio/nl/object_desk.mp3",
+        "en": "audio/en/object_desk.mp3",
+        "es": "audio/es/object_desk.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_school_bell",
+    "category": "classroom",
+    "tags": ["school", "time", "sound"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "kampana",
+      "nl": "schoolbel",
+      "en": "school bell",
+      "es": "campana escolar"
+    },
+    "media": {
+      "image": "images/classroom/object_school_bell.webp",
+      "audio": {
+        "pap": "audio/pap/object_school_bell.mp3",
+        "nl": "audio/nl/object_school_bell.mp3",
+        "en": "audio/en/object_school_bell.mp3",
+        "es": "audio/es/object_school_bell.mp3"
+      }
+    }
+  }
+]

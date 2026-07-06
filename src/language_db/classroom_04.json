@@ -1,0 +1,212 @@
+[
+  {
+    "id": "object_globe",
+    "category": "classroom",
+    "tags": ["geography", "earth", "classroom"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "globo",
+      "nl": "wereldbol",
+      "en": "globe",
+      "es": "globo terráqueo"
+    },
+    "media": {
+      "image": "images/classroom/object_globe.webp",
+      "audio": {
+        "pap": "audio/pap/object_globe.mp3",
+        "nl": "audio/nl/object_globe.mp3",
+        "en": "audio/en/object_globe.mp3",
+        "es": "audio/es/object_globe.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_folder",
+    "category": "school",
+    "tags": ["paper", "organization", "school"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "map",
+      "nl": "map",
+      "en": "folder",
+      "es": "carpeta"
+    },
+    "media": {
+      "image": "images/school/object_folder.webp",
+      "audio": {
+        "pap": "audio/pap/object_folder.mp3",
+        "nl": "audio/nl/object_folder.mp3",
+        "en": "audio/en/object_folder.mp3",
+        "es": "audio/es/object_folder.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_marker",
+    "category": "school",
+    "tags": ["writing", "whiteboard", "school"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "marker",
+      "nl": "stift",
+      "en": "marker",
+      "es": "marcador"
+    },
+    "media": {
+      "image": "images/school/object_marker.webp",
+      "audio": {
+        "pap": "audio/pap/object_marker.mp3",
+        "nl": "audio/nl/object_marker.mp3",
+        "en": "audio/en/object_marker.mp3",
+        "es": "audio/es/object_marker.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_chalk",
+    "category": "school",
+    "tags": ["writing", "blackboard", "school"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "krijt",
+      "nl": "krijt",
+      "en": "chalk",
+      "es": "tiza"
+    },
+    "media": {
+      "image": "images/school/object_chalk.webp",
+      "audio": {
+        "pap": "audio/pap/object_chalk.mp3",
+        "nl": "audio/nl/object_chalk.mp3",
+        "en": "audio/en/object_chalk.mp3",
+        "es": "audio/es/object_chalk.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_blackboard",
+    "category": "classroom",
+    "tags": ["classroom", "teaching", "writing"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "bord",
+      "nl": "schoolbord",
+      "en": "blackboard",
+      "es": "pizarra"
+    },
+    "media": {
+      "image": "images/classroom/object_blackboard.webp",
+      "audio": {
+        "pap": "audio/pap/object_blackboard.mp3",
+        "nl": "audio/nl/object_blackboard.mp3",
+        "en": "audio/en/object_blackboard.mp3",
+        "es": "audio/es/object_blackboard.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_light",
+    "category": "classroom",
+    "tags": ["electricity", "classroom", "lighting"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "lus",
+      "nl": "lamp",
+      "en": "light",
+      "es": "luz"
+    },
+    "media": {
+      "image": "images/classroom/object_light.webp",
+      "audio": {
+        "pap": "audio/pap/object_light.mp3",
+        "nl": "audio/nl/object_light.mp3",
+        "en": "audio/en/object_light.mp3",
+        "es": "audio/es/object_light.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_fan",
+    "category": "classroom",
+    "tags": ["air", "classroom", "electronics"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "bentiladó",
+      "nl": "ventilator",
+      "en": "fan",
+      "es": "ventilador"
+    },
+    "media": {
+      "image": "images/classroom/object_fan.webp",
+      "audio": {
+        "pap": "audio/pap/object_fan.mp3",
+        "nl": "audio/nl/object_fan.mp3",
+        "en": "audio/en/object_fan.mp3",
+        "es": "audio/es/object_fan.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_water_bottle",
+    "category": "school",
+    "tags": ["drink", "school", "personal"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "bòtèli di awa",
+      "nl": "waterfles",
+      "en": "water bottle",
+      "es": "botella de agua"
+    },
+    "media": {
+      "image": "images/school/object_water_bottle.webp",
+      "audio": {
+        "pap": "audio/pap/object_water_bottle.mp3",
+        "nl": "audio/nl/object_water_bottle.mp3",
+        "en": "audio/en/object_water_bottle.mp3",
+        "es": "audio/es/object_water_bottle.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_sharpener",
+    "category": "school",
+    "tags": ["writing", "school", "stationery"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "sakapòtlòt",
+      "nl": "puntenslijper",
+      "en": "sharpener",
+      "es": "sacapuntas"
+    },
+    "media": {
+      "image": "images/school/object_sharpener.webp",
+      "audio": {
+        "pap": "audio/pap/object_sharpener.mp3",
+        "nl": "audio/nl/object_sharpener.mp3",
+        "en": "audio/en/object_sharpener.mp3",
+        "es": "audio/es/object_sharpener.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_stapler",
+    "category": "school",
+    "tags": ["office", "paper", "school"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "stapler",
+      "nl": "nietmachine",
+      "en": "stapler",
+      "es": "grapadora"
+    },
+    "media": {
+      "image": "images/school/object_stapler.webp",
+      "audio": {
+        "pap": "audio/pap/object_stapler.mp3",
+        "nl": "audio/nl/object_stapler.mp3",
+        "en": "audio/en/object_stapler.mp3",
+        "es": "audio/es/object_stapler.mp3"
+      }
+    }
+  }
+]

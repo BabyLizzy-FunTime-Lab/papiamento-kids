@@ -1,0 +1,212 @@
+[
+  {
+    "id": "object_keyboard",
+    "category": "technology",
+    "tags": ["technology", "computer", "typing"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "teklado",
+      "nl": "toetsenbord",
+      "en": "keyboard",
+      "es": "teclado"
+    },
+    "media": {
+      "image": "images/technology/object_keyboard.webp",
+      "audio": {
+        "pap": "audio/pap/object_keyboard.mp3",
+        "nl": "audio/nl/object_keyboard.mp3",
+        "en": "audio/en/object_keyboard.mp3",
+        "es": "audio/es/object_keyboard.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_mouse",
+    "category": "technology",
+    "tags": ["technology", "computer", "pointing"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "mous",
+      "nl": "muis",
+      "en": "mouse",
+      "es": "ratón"
+    },
+    "media": {
+      "image": "images/technology/object_mouse.webp",
+      "audio": {
+        "pap": "audio/pap/object_mouse.mp3",
+        "nl": "audio/nl/object_mouse.mp3",
+        "en": "audio/en/object_mouse.mp3",
+        "es": "audio/es/object_mouse.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_monitor",
+    "category": "technology",
+    "tags": ["technology", "computer", "screen"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "pantaya",
+      "nl": "beeldscherm",
+      "en": "monitor",
+      "es": "monitor"
+    },
+    "media": {
+      "image": "images/technology/object_monitor.webp",
+      "audio": {
+        "pap": "audio/pap/object_monitor.mp3",
+        "nl": "audio/nl/object_monitor.mp3",
+        "en": "audio/en/object_monitor.mp3",
+        "es": "audio/es/object_monitor.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_printer",
+    "category": "technology",
+    "tags": ["technology", "office", "paper"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "printer",
+      "nl": "printer",
+      "en": "printer",
+      "es": "impresora"
+    },
+    "media": {
+      "image": "images/technology/object_printer.webp",
+      "audio": {
+        "pap": "audio/pap/object_printer.mp3",
+        "nl": "audio/nl/object_printer.mp3",
+        "en": "audio/en/object_printer.mp3",
+        "es": "audio/es/object_printer.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_projector",
+    "category": "technology",
+    "tags": ["technology", "presentation", "classroom"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "proyektor",
+      "nl": "beamer",
+      "en": "projector",
+      "es": "proyector"
+    },
+    "media": {
+      "image": "images/technology/object_projector.webp",
+      "audio": {
+        "pap": "audio/pap/object_projector.mp3",
+        "nl": "audio/nl/object_projector.mp3",
+        "en": "audio/en/object_projector.mp3",
+        "es": "audio/es/object_projector.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_speaker",
+    "category": "technology",
+    "tags": ["technology", "audio", "electronics"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "spiker",
+      "nl": "luidspreker",
+      "en": "speaker",
+      "es": "altavoz"
+    },
+    "media": {
+      "image": "images/technology/object_speaker.webp",
+      "audio": {
+        "pap": "audio/pap/object_speaker.mp3",
+        "nl": "audio/nl/object_speaker.mp3",
+        "en": "audio/en/object_speaker.mp3",
+        "es": "audio/es/object_speaker.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_bookcase",
+    "category": "furniture",
+    "tags": ["furniture", "books", "storage"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "estante",
+      "nl": "boekenkast",
+      "en": "bookcase",
+      "es": "estantería"
+    },
+    "media": {
+      "image": "images/furniture/object_bookcase.webp",
+      "audio": {
+        "pap": "audio/pap/object_bookcase.mp3",
+        "nl": "audio/nl/object_bookcase.mp3",
+        "en": "audio/en/object_bookcase.mp3",
+        "es": "audio/es/object_bookcase.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_trash_bin",
+    "category": "classroom",
+    "tags": ["cleaning", "classroom", "waste"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "zùitbak",
+      "nl": "prullenbak",
+      "en": "trash bin",
+      "es": "papelera"
+    },
+    "media": {
+      "image": "images/classroom/object_trash_bin.webp",
+      "audio": {
+        "pap": "audio/pap/object_trash_bin.mp3",
+        "nl": "audio/nl/object_trash_bin.mp3",
+        "en": "audio/en/object_trash_bin.mp3",
+        "es": "audio/es/object_trash_bin.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_paper",
+    "category": "school",
+    "tags": ["paper", "writing", "drawing"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "papel",
+      "nl": "papier",
+      "en": "paper",
+      "es": "papel"
+    },
+    "media": {
+      "image": "images/school/object_paper.webp",
+      "audio": {
+        "pap": "audio/pap/object_paper.mp3",
+        "nl": "audio/nl/object_paper.mp3",
+        "en": "audio/en/object_paper.mp3",
+        "es": "audio/es/object_paper.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_map",
+    "category": "classroom",
+    "tags": ["geography", "learning", "classroom"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "mapa",
+      "nl": "kaart",
+      "en": "map",
+      "es": "mapa"
+    },
+    "media": {
+      "image": "images/classroom/object_map.webp",
+      "audio": {
+        "pap": "audio/pap/object_map.mp3",
+        "nl": "audio/nl/object_map.mp3",
+        "en": "audio/en/object_map.mp3",
+        "es": "audio/es/object_map.mp3"
+      }
+    }
+  }
+]

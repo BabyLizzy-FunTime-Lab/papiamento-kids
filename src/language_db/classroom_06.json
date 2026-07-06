@@ -1,0 +1,212 @@
+[
+  {
+    "id": "object_school_bus",
+    "category": "transport",
+    "tags": ["school", "transport", "vehicle"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "bus di skol",
+      "nl": "schoolbus",
+      "en": "school bus",
+      "es": "autobús escolar"
+    },
+    "media": {
+      "image": "images/transport/object_school_bus.webp",
+      "audio": {
+        "pap": "audio/pap/object_school_bus.mp3",
+        "nl": "audio/nl/object_school_bus.mp3",
+        "en": "audio/en/object_school_bus.mp3",
+        "es": "audio/es/object_school_bus.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_schoolbag_hook",
+    "category": "classroom",
+    "tags": ["classroom", "storage", "furniture"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "haaki",
+      "nl": "kapstokhaak",
+      "en": "coat hook",
+      "es": "percha"
+    },
+    "media": {
+      "image": "images/classroom/object_schoolbag_hook.webp",
+      "audio": {
+        "pap": "audio/pap/object_schoolbag_hook.mp3",
+        "nl": "audio/nl/object_schoolbag_hook.mp3",
+        "en": "audio/en/object_schoolbag_hook.mp3",
+        "es": "audio/es/object_schoolbag_hook.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_coat",
+    "category": "clothing",
+    "tags": ["clothing", "school", "personal"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "jas",
+      "nl": "jas",
+      "en": "coat",
+      "es": "abrigo"
+    },
+    "media": {
+      "image": "images/clothing/object_coat.webp",
+      "audio": {
+        "pap": "audio/pap/object_coat.mp3",
+        "nl": "audio/nl/object_coat.mp3",
+        "en": "audio/en/object_coat.mp3",
+        "es": "audio/es/object_coat.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_school_uniform",
+    "category": "clothing",
+    "tags": ["clothing", "school"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "uniform",
+      "nl": "schooluniform",
+      "en": "school uniform",
+      "es": "uniforme escolar"
+    },
+    "media": {
+      "image": "images/clothing/object_school_uniform.webp",
+      "audio": {
+        "pap": "audio/pap/object_school_uniform.mp3",
+        "nl": "audio/nl/object_school_uniform.mp3",
+        "en": "audio/en/object_school_uniform.mp3",
+        "es": "audio/es/object_school_uniform.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_lesson_schedule",
+    "category": "school",
+    "tags": ["school", "planning", "time"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "orario",
+      "nl": "rooster",
+      "en": "schedule",
+      "es": "horario"
+    },
+    "media": {
+      "image": "images/school/object_lesson_schedule.webp",
+      "audio": {
+        "pap": "audio/pap/object_lesson_schedule.mp3",
+        "nl": "audio/nl/object_lesson_schedule.mp3",
+        "en": "audio/en/object_lesson_schedule.mp3",
+        "es": "audio/es/object_lesson_schedule.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_homework",
+    "category": "school",
+    "tags": ["school", "study", "assignment"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "tarea",
+      "nl": "huiswerk",
+      "en": "homework",
+      "es": "tarea"
+    },
+    "media": {
+      "image": "images/school/object_homework.webp",
+      "audio": {
+        "pap": "audio/pap/object_homework.mp3",
+        "nl": "audio/nl/object_homework.mp3",
+        "en": "audio/en/object_homework.mp3",
+        "es": "audio/es/object_homework.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_exam",
+    "category": "school",
+    "tags": ["school", "assessment", "learning"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "èksamen",
+      "nl": "toets",
+      "en": "exam",
+      "es": "examen"
+    },
+    "media": {
+      "image": "images/school/object_exam.webp",
+      "audio": {
+        "pap": "audio/pap/object_exam.mp3",
+        "nl": "audio/nl/object_exam.mp3",
+        "en": "audio/en/object_exam.mp3",
+        "es": "audio/es/object_exam.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_certificate",
+    "category": "school",
+    "tags": ["school", "achievement", "award"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "sertifikado",
+      "nl": "certificaat",
+      "en": "certificate",
+      "es": "certificado"
+    },
+    "media": {
+      "image": "images/school/object_certificate.webp",
+      "audio": {
+        "pap": "audio/pap/object_certificate.mp3",
+        "nl": "audio/nl/object_certificate.mp3",
+        "en": "audio/en/object_certificate.mp3",
+        "es": "audio/es/object_certificate.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_star_sticker",
+    "category": "school",
+    "tags": ["reward", "school", "motivation"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "stiker di estrella",
+      "nl": "beloningssticker",
+      "en": "star sticker",
+      "es": "pegatina de estrella"
+    },
+    "media": {
+      "image": "images/school/object_star_sticker.webp",
+      "audio": {
+        "pap": "audio/pap/object_star_sticker.mp3",
+        "nl": "audio/nl/object_star_sticker.mp3",
+        "en": "audio/en/object_star_sticker.mp3",
+        "es": "audio/es/object_star_sticker.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_school",
+    "category": "places",
+    "tags": ["place", "education", "building"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "skol",
+      "nl": "school",
+      "en": "school",
+      "es": "escuela"
+    },
+    "media": {
+      "image": "images/places/object_school.webp",
+      "audio": {
+        "pap": "audio/pap/object_school.mp3",
+        "nl": "audio/nl/object_school.mp3",
+        "en": "audio/en/object_school.mp3",
+        "es": "audio/es/object_school.mp3"
+      }
+    }
+  }
+]

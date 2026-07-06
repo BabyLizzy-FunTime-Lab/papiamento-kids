@@ -1,0 +1,212 @@
+[
+  {
+    "id": "person_teacher",
+    "category": "people",
+    "tags": ["classroom", "person", "education"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "maestro",
+      "nl": "leraar",
+      "en": "teacher",
+      "es": "maestro"
+    },
+    "media": {
+      "image": "images/people/person_teacher.webp",
+      "audio": {
+        "pap": "audio/pap/person_teacher.mp3",
+        "nl": "audio/nl/person_teacher.mp3",
+        "en": "audio/en/person_teacher.mp3",
+        "es": "audio/es/person_teacher.mp3"
+      }
+    }
+  },
+  {
+    "id": "person_student",
+    "category": "people",
+    "tags": ["classroom", "person", "education"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "mucha",
+      "nl": "leerling",
+      "en": "student",
+      "es": "estudiante"
+    },
+    "media": {
+      "image": "images/people/person_student.webp",
+      "audio": {
+        "pap": "audio/pap/person_student.mp3",
+        "nl": "audio/nl/person_student.mp3",
+        "en": "audio/en/person_student.mp3",
+        "es": "audio/es/person_student.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_chair",
+    "category": "furniture",
+    "tags": ["classroom", "furniture", "seat"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "stul",
+      "nl": "stoel",
+      "en": "chair",
+      "es": "silla"
+    },
+    "media": {
+      "image": "images/furniture/object_chair.webp",
+      "audio": {
+        "pap": "audio/pap/object_chair.mp3",
+        "nl": "audio/nl/object_chair.mp3",
+        "en": "audio/en/object_chair.mp3",
+        "es": "audio/es/object_chair.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_table",
+    "category": "furniture",
+    "tags": ["classroom", "furniture"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "mesa",
+      "nl": "tafel",
+      "en": "table",
+      "es": "mesa"
+    },
+    "media": {
+      "image": "images/furniture/object_table.webp",
+      "audio": {
+        "pap": "audio/pap/object_table.mp3",
+        "nl": "audio/nl/object_table.mp3",
+        "en": "audio/en/object_table.mp3",
+        "es": "audio/es/object_table.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_book",
+    "category": "school",
+    "tags": ["reading", "school", "book"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "buki",
+      "nl": "boek",
+      "en": "book",
+      "es": "libro"
+    },
+    "media": {
+      "image": "images/school/object_book.webp",
+      "audio": {
+        "pap": "audio/pap/object_book.mp3",
+        "nl": "audio/nl/object_book.mp3",
+        "en": "audio/en/object_book.mp3",
+        "es": "audio/es/object_book.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_pencil",
+    "category": "school",
+    "tags": ["writing", "school", "stationery"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "pòtlòt",
+      "nl": "potlood",
+      "en": "pencil",
+      "es": "lápiz"
+    },
+    "media": {
+      "image": "images/school/object_pencil.webp",
+      "audio": {
+        "pap": "audio/pap/object_pencil.mp3",
+        "nl": "audio/nl/object_pencil.mp3",
+        "en": "audio/en/object_pencil.mp3",
+        "es": "audio/es/object_pencil.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_eraser",
+    "category": "school",
+    "tags": ["writing", "school", "stationery"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "gòm",
+      "nl": "gum",
+      "en": "eraser",
+      "es": "goma"
+    },
+    "media": {
+      "image": "images/school/object_eraser.webp",
+      "audio": {
+        "pap": "audio/pap/object_eraser.mp3",
+        "nl": "audio/nl/object_eraser.mp3",
+        "en": "audio/en/object_eraser.mp3",
+        "es": "audio/es/object_eraser.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_scissors",
+    "category": "school",
+    "tags": ["craft", "school", "stationery"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "sker",
+      "nl": "schaar",
+      "en": "scissors",
+      "es": "tijeras"
+    },
+    "media": {
+      "image": "images/school/object_scissors.webp",
+      "audio": {
+        "pap": "audio/pap/object_scissors.mp3",
+        "nl": "audio/nl/object_scissors.mp3",
+        "en": "audio/en/object_scissors.mp3",
+        "es": "audio/es/object_scissors.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_calculator",
+    "category": "school",
+    "tags": ["math", "school", "electronics"],
+    "difficulty": 3,
+    "translations": {
+      "pap": "kalkuladó",
+      "nl": "rekenmachine",
+      "en": "calculator",
+      "es": "calculadora"
+    },
+    "media": {
+      "image": "images/school/object_calculator.webp",
+      "audio": {
+        "pap": "audio/pap/object_calculator.mp3",
+        "nl": "audio/nl/object_calculator.mp3",
+        "en": "audio/en/object_calculator.mp3",
+        "es": "audio/es/object_calculator.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_whiteboard",
+    "category": "classroom",
+    "tags": ["classroom", "writing", "teaching"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "bord",
+      "nl": "whiteboard",
+      "en": "whiteboard",
+      "es": "pizarra blanca"
+    },
+    "media": {
+      "image": "images/classroom/object_whiteboard.webp",
+      "audio": {
+        "pap": "audio/pap/object_whiteboard.mp3",
+        "nl": "audio/nl/object_whiteboard.mp3",
+        "en": "audio/en/object_whiteboard.mp3",
+        "es": "audio/es/object_whiteboard.mp3"
+      }
+    }
+  }
+]

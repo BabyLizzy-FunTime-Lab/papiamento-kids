@@ -1,0 +1,212 @@
+[
+  {
+    "id": "object_pen",
+    "category": "school",
+    "tags": ["writing", "school", "stationery"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "pluma",
+      "nl": "pen",
+      "en": "pen",
+      "es": "bolígrafo"
+    },
+    "media": {
+      "image": "images/school/object_pen.webp",
+      "audio": {
+        "pap": "audio/pap/object_pen.mp3",
+        "nl": "audio/nl/object_pen.mp3",
+        "en": "audio/en/object_pen.mp3",
+        "es": "audio/es/object_pen.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_notebook",
+    "category": "school",
+    "tags": ["writing", "school", "paper"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "kuaderno",
+      "nl": "schrift",
+      "en": "notebook",
+      "es": "cuaderno"
+    },
+    "media": {
+      "image": "images/school/object_notebook.webp",
+      "audio": {
+        "pap": "audio/pap/object_notebook.mp3",
+        "nl": "audio/nl/object_notebook.mp3",
+        "en": "audio/en/object_notebook.mp3",
+        "es": "audio/es/object_notebook.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_ruler",
+    "category": "school",
+    "tags": ["math", "school", "measuring"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "regla",
+      "nl": "liniaal",
+      "en": "ruler",
+      "es": "regla"
+    },
+    "media": {
+      "image": "images/school/object_ruler.webp",
+      "audio": {
+        "pap": "audio/pap/object_ruler.mp3",
+        "nl": "audio/nl/object_ruler.mp3",
+        "en": "audio/en/object_ruler.mp3",
+        "es": "audio/es/object_ruler.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_glue",
+    "category": "school",
+    "tags": ["craft", "school", "stationery"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "goma",
+      "nl": "lijm",
+      "en": "glue",
+      "es": "pegamento"
+    },
+    "media": {
+      "image": "images/school/object_glue.webp",
+      "audio": {
+        "pap": "audio/pap/object_glue.mp3",
+        "nl": "audio/nl/object_glue.mp3",
+        "en": "audio/en/object_glue.mp3",
+        "es": "audio/es/object_glue.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_crayons",
+    "category": "art",
+    "tags": ["drawing", "coloring", "school"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "krayòn",
+      "nl": "kleurpotloden",
+      "en": "crayons",
+      "es": "crayones"
+    },
+    "media": {
+      "image": "images/art/object_crayons.webp",
+      "audio": {
+        "pap": "audio/pap/object_crayons.mp3",
+        "nl": "audio/nl/object_crayons.mp3",
+        "en": "audio/en/object_crayons.mp3",
+        "es": "audio/es/object_crayons.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_backpack",
+    "category": "school",
+    "tags": ["bag", "school", "personal"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "tas",
+      "nl": "rugzak",
+      "en": "backpack",
+      "es": "mochila"
+    },
+    "media": {
+      "image": "images/school/object_backpack.webp",
+      "audio": {
+        "pap": "audio/pap/object_backpack.mp3",
+        "nl": "audio/nl/object_backpack.mp3",
+        "en": "audio/en/object_backpack.mp3",
+        "es": "audio/es/object_backpack.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_clock",
+    "category": "classroom",
+    "tags": ["time", "classroom", "wall"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "oloshi",
+      "nl": "klok",
+      "en": "clock",
+      "es": "reloj"
+    },
+    "media": {
+      "image": "images/classroom/object_clock.webp",
+      "audio": {
+        "pap": "audio/pap/object_clock.mp3",
+        "nl": "audio/nl/object_clock.mp3",
+        "en": "audio/en/object_clock.mp3",
+        "es": "audio/es/object_clock.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_window",
+    "category": "classroom",
+    "tags": ["building", "classroom"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "bentana",
+      "nl": "raam",
+      "en": "window",
+      "es": "ventana"
+    },
+    "media": {
+      "image": "images/classroom/object_window.webp",
+      "audio": {
+        "pap": "audio/pap/object_window.mp3",
+        "nl": "audio/nl/object_window.mp3",
+        "en": "audio/en/object_window.mp3",
+        "es": "audio/es/object_window.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_door",
+    "category": "classroom",
+    "tags": ["building", "classroom"],
+    "difficulty": 1,
+    "translations": {
+      "pap": "porta",
+      "nl": "deur",
+      "en": "door",
+      "es": "puerta"
+    },
+    "media": {
+      "image": "images/classroom/object_door.webp",
+      "audio": {
+        "pap": "audio/pap/object_door.mp3",
+        "nl": "audio/nl/object_door.mp3",
+        "en": "audio/en/object_door.mp3",
+        "es": "audio/es/object_door.mp3"
+      }
+    }
+  },
+  {
+    "id": "object_computer",
+    "category": "technology",
+    "tags": ["technology", "electronics", "classroom"],
+    "difficulty": 2,
+    "translations": {
+      "pap": "kompiuter",
+      "nl": "computer",
+      "en": "computer",
+      "es": "computadora"
+    },
+    "media": {
+      "image": "images/technology/object_computer.webp",
+      "audio": {
+        "pap": "audio/pap/object_computer.mp3",
+        "nl": "audio/nl/object_computer.mp3",
+        "en": "audio/en/object_computer.mp3",
+        "es": "audio/es/object_computer.mp3"
+      }
+    }
+  }
+]

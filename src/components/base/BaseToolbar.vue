@@ -22,7 +22,7 @@ const defaultAvatar = loginStore.getDefaultAvatar;
 </script>
 
 <template>
-  <ion-header>
+  <ion-header class="toolbar--container">
     <ion-toolbar class="toolbar">
       <ion-img
           class="toolbar__logo"
@@ -46,6 +46,9 @@ const defaultAvatar = loginStore.getDefaultAvatar;
 </template>
 
 <style scoped>
+.toolbar--container {
+  background-color: var(--ion-toolbar-background);
+}
 .toolbar {
   height: 4em;
 }
@@ -59,5 +62,11 @@ const defaultAvatar = loginStore.getDefaultAvatar;
   width: 3em;
   border: .1em solid var(--ion-color-tertiary);
   background-color: var(--ion-color-primary);
+}
+@media only screen and (min-width: 1200px) {
+  .toolbar {
+    max-width: 65%;
+    margin: auto;
+  }
 }
 </style>
