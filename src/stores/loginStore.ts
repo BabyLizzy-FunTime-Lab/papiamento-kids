@@ -43,6 +43,10 @@ export const useLoginStore = defineStore('login', {
             this.activeProfileId = id;
             await storage.set('activeProfileId', id);
         },
+        async setExistingProfiles(existingProfiles: Profile[]) {
+            const storage = getStorage();
+            await storage.set('profiles', existingProfiles);
+        },
         async createProfile(name: string, avatar: string) {
             const storage = getStorage();
 
@@ -71,6 +75,7 @@ export const useLoginStore = defineStore('login', {
                 throw new Error("Guest profile not found.");
             }
             await this.setActiveProfile(guestProfile.id);
+            await this.setExistingProfiles(this.profiles);
         },
 
     }
